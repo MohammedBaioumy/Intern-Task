@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "4e78ad3b-d5bf-4aff-a70d-fbfa1321fb4d",
+		"name": "Appout Internship task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24569061",
+		"_collection_link": "https://mohamed-mahmod5855.postman.co/workspace/BaioumyWorkSpace~356880a0-6bb6-433b-9c4e-ea7098010630/collection/24569061-4e78ad3b-d5bf-4aff-a70d-fbfa1321fb4d?action=share&source=collection_link&creator=24569061"
+	},
+	"item": [
+		{
+			"name": "Language Detection Service",
+			"item": [
+				{
+					"name": "detect single",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"text\": \"Hello, how are you? examples of such lists include common words difficult words or basic vocabulary\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl2}}/api/detect",
+							"host": [
+								"{{BaseUrl2}}"
+							],
+							"path": [
+								"api",
+								"detect"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detect patch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"texts\": [\r\n    \"Hello there! how are you?\",\r\n    \"مرحبا بك في خدمتنا\",\r\n    \"Bonjour mon ami\"\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl2}}/api/detect/batch",
+							"host": [
+								"{{BaseUrl2}}"
+							],
+							"path": [
+								"api",
+								"detect",
+								"batch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get languages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl2}}/api/languages",
+							"host": [
+								"{{BaseUrl2}}"
+							],
+							"path": [
+								"api",
+								"languages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl2}}/health",
+							"host": [
+								"{{BaseUrl2}}"
+							],
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseUrl2",
+			"value": ""
+		}
+	]
+}
